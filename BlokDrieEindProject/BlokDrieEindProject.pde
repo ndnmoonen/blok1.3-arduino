@@ -6,7 +6,7 @@ Arduino arduino;
 Space spaceBack;
 Planet planetMain;
 Ground groundFront;
-Stars starsBack;
+Stars[] starsBack = new Stars[17];
 
 //arduino buttons
 int colorSpace = 0;
@@ -28,7 +28,9 @@ void setup() {
   spaceBack = new Space();
   planetMain = new Planet();
   groundFront = new Ground();
-  starsBack = new Stars();
+  for (int i = 0; i < starsBack.length; i++) {
+    starsBack[i] = new Stars();
+  }
   
 }
 
@@ -69,8 +71,8 @@ void draw() {
   spaceBack.drawSpace(colorSpace);
   planetMain.drawPlanet(colorPlanet,ringAmount);
   groundFront.drawGround(colorGround);
-  for (int i = 0; i < 16; i++) {
-    starsBack.drawStars(colorPlanet,positionX[i],positionY[i]);
+  for (int i = 0; i < starsBack.length; i++) {
+    starsBack[i].drawStars(colorPlanet,positionX[i],positionY[i]);
   }
 
 }
