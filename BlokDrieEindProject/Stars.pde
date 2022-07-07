@@ -4,14 +4,13 @@ class Stars {
   int y;
   color[] palleteStar = {#82d1cd,#82add1,#8382d1,#b482d1,#d182a9,#d19982,#d1b882,#c8d182,#93d182};
   
-  Stars(){
-    
-  }
-  
-  void drawStars(int colorPlanet, int starX, int starY){
-    starPallette = colorPlanet;
+  Stars(int starX, int starY){
     x = starX;
     y = starY;
+  }
+  
+  void drawStars(int colorPlanet){
+    starPallette = colorPlanet;
       noStroke();
     
       //star
