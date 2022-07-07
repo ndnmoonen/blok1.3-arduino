@@ -1,7 +1,7 @@
 # blok1.3-arduino
 BlokDrieEindProject is met arduino
-.
-.
+
+# new
 WerktZonderArduinoBlokDrieEindProject werkt zonder arduino
 op je keyboard.
 
