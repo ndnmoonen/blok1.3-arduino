@@ -25,12 +25,17 @@ void setup() {
   //arduino.pinMode(9, Arduino.INPUT); // set pin 9 van output naar input
   //arduino.pinMode(10, Arduino.INPUT); // set pin 10 van output naar input
     
+    //sterren
+  int[] positionX = {20,60,100,50,270,150,200,180,400,500,530,630,700,600,650,750,720};
+  int[] positionY = {20,150,250,350,40,70,320,190,10,340,80,30,100,180,290,230,330};
+  
+    
   //objects
   spaceBack = new Space();
   planetMain = new Planet();
   groundFront = new Ground();
   for (int i = 0; i < starsBack.length; i++) {
-    starsBack[i] = new Stars();
+    starsBack[i] = new Stars(positionX[i],positionY[i]);
   }
   
 }
@@ -41,16 +46,13 @@ void draw() {
   //int draai = arduino.analogRead(0);
   //float ringAmount = map(draai,1023,0,0,10);
   
-  //sterren
-  int[] positionX = {20,60,100,50,270,150,200,180,400,500,530,630,700,600,650,750,720};
-  int[] positionY = {20,150,250,350,40,70,320,190,10,340,80,30,100,180,290,230,330};
 
   
   spaceBack.drawSpace(colorSpace);
   planetMain.drawPlanet(colorPlanet,ring2); //eerst ringAmount
   groundFront.drawGround(colorGround);
   for (int i = 0; i < starsBack.length; i++) {
-    starsBack[i].drawStars(colorPlanet,positionX[i],positionY[i]);
+    starsBack[i].drawStars(colorPlanet);
   }
 
 }
