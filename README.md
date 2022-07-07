@@ -1,6 +1,5 @@
 # blok1.3-arduino
-objects staan nu in de setup en daardoor staan de variables van de objects nu in de draw,
+BlokDrieEindProject is met arduino
 
-class Stars maakt nu 1 ster die ik in de draw dus meerdere keren gebruikt voor meer sterrren,
-
-ik heb het ook getest en het werkt maar ik weet niet of ik er nog een video van moet maken.
+WerktZonderArduinoBlokDrieEindProject werkt zonder arduino
+op je keyboard, 1 verandert de achtergrond, 2 veranderd de planeet en sterren, 3 veranderd de voorgrond, en 4 doet het aantal ringen omhoog zoals de draaiknop en als die maximaal is reset het.
